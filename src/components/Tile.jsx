@@ -1,8 +1,19 @@
 import React from 'react';
 
-const Tile = ({top, left}) => {
+
+const Tile = ({id, posLeft, posTop, tileObject, image=null, showId=false, formation=null, status=null}) => {
+
   return (
-    <div className='tile' style={{top, left}}></div>
+    <div  id={id}
+      className='tile'
+      name="tile"
+      //onClick={detectClick} 
+      style={{
+        backgroundImage:`url(${image})`, //not working
+        left:`${posLeft}px`,
+        top:`${posTop}px`,
+      }}>
+    </div>
   )
 }
 
